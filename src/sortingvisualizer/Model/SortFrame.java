@@ -17,7 +17,7 @@ public class SortFrame extends javax.swing.JFrame {
 
     private final int BORDER_SIZE = 20;
     private final int MARGIN = 10;
-    private final int ROWS=1;
+    private final int ROWS=3;
     private HashMap<String,Double> times;
     
     public SortFrame() {
@@ -37,75 +37,75 @@ public class SortFrame extends javax.swing.JFrame {
         int[] tab = this.shuffleArray(this.createArray());
         
         
-//        ExecutorService ex = Executors.newFixedThreadPool(9);
-//        //for(int i = 0; i < ROWS; i++){
-//        //    for(int j = 0;j<ROWS;j++){
-//                SelectionSortPanel ssp2 = new SelectionSortPanel(0, tab,3);
-//                
-//                InsersionSortPanel isp2 = new InsersionSortPanel(0, tab,3);
-//                
-//                BubbleSortOptiPanel bsp2 = new BubbleSortOptiPanel(0, tab,3);
-//                
-//                CocktailSortPanel csp2 = new CocktailSortPanel(0, tab,3);
-//                
-//                CombSortPanel cbsp2 = new CombSortPanel(0, tab,3);
-//                
-//                GnomeSortPanel gsp2 = new GnomeSortPanel(0, tab,3);
-//                
-//                MergeSortPanel msp2 = new MergeSortPanel(0, tab,3);
-//                
-//                HeapSortPanel hsp2 = new HeapSortPanel(0, tab,3);
-//
-//                QuickSortPanel qsp2 = new QuickSortPanel(0, tab,3);
-//                
-//                ex.execute(ssp2);
-//                ex.execute(isp2);
-//                ex.execute(bsp2);
-//                ex.execute(csp2);
-//                ex.execute(cbsp2);
-//                ex.execute(gsp2);
-//                ex.execute(msp2);
-//                ex.execute(hsp2);
-//                ex.execute(qsp2);
+        ExecutorService ex = Executors.newFixedThreadPool(9);
+        //for(int i = 0; i < ROWS; i++){
+        //    for(int j = 0;j<ROWS;j++){
+                SelectionSortPanel ssp2 = new SelectionSortPanel(0, tab,3);
+                
+                InsersionSortPanel isp2 = new InsersionSortPanel(0, tab,3);
+                
+                BubbleSortOptiPanel bsp2 = new BubbleSortOptiPanel(0, tab,3);
+                
+                CocktailSortPanel csp2 = new CocktailSortPanel(0, tab,3);
+                
+                CombSortPanel cbsp2 = new CombSortPanel(0, tab,3);
+                
+                GnomeSortPanel gsp2 = new GnomeSortPanel(0, tab,3);
+                
+                MergeSortPanel msp2 = new MergeSortPanel(0, tab,3);
+                
+                HeapSortPanel hsp2 = new HeapSortPanel(0, tab,3);
+
+                QuickSortPanel qsp2 = new QuickSortPanel(0, tab,3);
+                
+                ex.execute(ssp2);
+                ex.execute(isp2);
+                ex.execute(bsp2);
+                ex.execute(csp2);
+                ex.execute(cbsp2);
+                ex.execute(gsp2);
+                ex.execute(msp2);
+                ex.execute(hsp2);
+                ex.execute(qsp2);
                 
         ExecutorService executor = Executors.newFixedThreadPool(1);
         
         SelectionSortPanel ssp = new SelectionSortPanel(15, tab,1);
         algoPanel.add(ssp);
 
-//        InsersionSortPanel isp = new InsersionSortPanel(15, tab,3);
-//        algoPanel.add(isp);
-//
-//        BubbleSortOptiPanel bsp = new BubbleSortOptiPanel(15, tab,3);
-//        algoPanel.add(bsp);
-//        
-//        CocktailSortPanel csp = new CocktailSortPanel(15, tab,3);
-//        algoPanel.add(csp);
-//
-//        CombSortPanel cbsp = new CombSortPanel(15, tab,3);
-//        algoPanel.add(cbsp);
-//        
-//        GnomeSortPanel gsp = new GnomeSortPanel(15, tab,3);
-//        algoPanel.add(gsp);
-//
-//        MergeSortPanel msp = new MergeSortPanel(15, tab,3);
-//        algoPanel.add(msp);
-//
-//        HeapSortPanel hsp = new HeapSortPanel(15, tab,3);
-//        algoPanel.add(hsp);        
-//
-//        QuickSortPanel qsp = new QuickSortPanel(15, tab,3);
-//        algoPanel.add(qsp);
+        InsersionSortPanel isp = new InsersionSortPanel(15, tab,3);
+        algoPanel.add(isp);
+
+        BubbleSortOptiPanel bsp = new BubbleSortOptiPanel(15, tab,3);
+        algoPanel.add(bsp);
+        
+        CocktailSortPanel csp = new CocktailSortPanel(15, tab,3);
+        algoPanel.add(csp);
+
+        CombSortPanel cbsp = new CombSortPanel(15, tab,3);
+        algoPanel.add(cbsp);
+        
+        GnomeSortPanel gsp = new GnomeSortPanel(15, tab,3);
+        algoPanel.add(gsp);
+
+        MergeSortPanel msp = new MergeSortPanel(15, tab,3);
+        algoPanel.add(msp);
+
+        HeapSortPanel hsp = new HeapSortPanel(15, tab,3);
+        algoPanel.add(hsp);        
+
+        QuickSortPanel qsp = new QuickSortPanel(15, tab,3);
+        algoPanel.add(qsp);
                 
         executor.execute(ssp);
-//        executor.execute(isp);
-//        executor.execute(bsp);
-//        executor.execute(csp); 
-//        executor.execute(cbsp);
-//        executor.execute(gsp);
-//        executor.execute(msp);
-//        executor.execute(hsp);
-//        executor.execute(qsp);
+        executor.execute(isp);
+        executor.execute(bsp);
+        executor.execute(csp); 
+        executor.execute(cbsp);
+        executor.execute(gsp);
+        executor.execute(msp);
+        executor.execute(hsp);
+        executor.execute(qsp);
         
         this.add(algoPanel);
         
